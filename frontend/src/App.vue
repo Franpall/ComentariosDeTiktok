@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <div v-if="userData">
-      <h2>{{ userData.nickname }}</h2>
+
+      <h2><span>SIGAN A </span>{{ userData.nickname }}</h2>
       <img :src="userData.avatarLarger" alt="Foto de perfil del usuario" />
       <p>Seguidores: {{ followers }}</p>
     </div>
@@ -73,6 +74,7 @@ export default {
 #app {
   max-width: 320px;
   margin: 2rem auto;
+  margin-bottom: 5px;
   padding: 1.5rem;
   border-radius: 16px;
   background: linear-gradient(145deg, #ffffff, #f2f2f2);
@@ -83,12 +85,12 @@ export default {
 }
 
 #app:hover {
-  transform: scale(1.02);
+  transform: scale(1.1);
 }
 
 img {
-  width: 120px;
-  height: 120px;
+  width: 170px;
+  height: 170px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #ff0050;
@@ -96,6 +98,7 @@ img {
 }
 
 h2 {
+  font-size: 2.5em;
   margin: 10px;
   font-size: 1.5rem;
   color: #333;
@@ -104,7 +107,7 @@ h2 {
 p {
   margin: 0.5rem 0;
   color: #666;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -138,7 +141,7 @@ button:hover {
   color: #0a0a0a;
   background: linear-gradient(135deg, #a7e4d5, #d9f5ec);
   padding: 20px 24px;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   line-height: 1.6;
@@ -151,7 +154,7 @@ button:hover {
 
 .texto_bottomM {
   font-family: 'Segoe UI', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: #222;
   background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
   padding: 22px 26px;
@@ -166,6 +169,13 @@ button:hover {
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
 }
 
+span{
+  border-radius: 10px;
+  background-color: #a11944;
+  color: white;
+  padding: 5px;
+  margin-right: 5px;
+}
 
 @media (max-width: 400px) {
   #app {
